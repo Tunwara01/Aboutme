@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About me</title>
+    <style>
+        body {
+            background-color: rgba(20, 19, 19, 0.912);
+        }
+
+        h1 {
+            color: white;
+        }
+
+        p {
+            color: white;
+        }
+
+        p {
+            text-indent: 50px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        li {
+            float: right;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: rgb(51, 130, 130);
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+
+    <ul class="t-navbar">
+        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#Project">Project</a></li>
+        <li><a href="#About us">About us</a></li>
+        <li><a href="#Home">Home</a></li>
+    </ul>
+
+    <div id="Home" class="t-display-content">
+
+        <img class="mySlides" src="images\1.jpg" width="1500" height="600">
+        <img class="mySlides" src="images\2.jpg" width="1500" height="600">
+
+        <button class="t-btn-floating t-hover-dark-grey"
+            style="background-color:darkgray; color:black;position:absolute;top:50%;border-radius:50%;width:40px;height:40px;left:0"
+            onclick="plusDivs(-1)">❮</a>
+            <button class="t-btn-floating t-hover-dark-grey"
+                style="background-color:darkgrey; color:black;position:absolute;top:50%;border-radius:50%;width:40px;height:40px;right:0"
+                onclick="plusDivs(1)">❯</a>
+    </div>
+
+    <div id="About us" class="t-navbar">
+        <h1>About us</h1>
+        <p>สวัสดีค่ะ ดิฉันนางสาว ธัญวรา ปานุราช ชื่อเล่น เตย กำลังศึกษาระดับปริญาตรี ชั้นปีที่ 4 คณะวิศวกรรมศาสตร์
+            สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลรัตนโกสินทร์ ดิฉันมีความสนใจด้าน front-end developer
+            เนื่องจากเล็งเห็นความสำคัญของ front-end ซึ่งส่วนนี้เป็นส่วนหน้าจะแสดงหน้าตาของเว็บไซต์ให้ user เห็น
+            ดิฉันอยากพัฒนาระบบหน้าบ้านที่ให้ความ สวยงาม เข้าใจง่ายและสะดวกมากยิ่งขึ้น
+            ซึ่งทั้งนี้รวมถึงการพัฒนาตนเองในทางที่ชอบให้ทำได้ดีควบคู่กันไปกับการพัฒนาระบบ ภาพรวมของดิฉันตอนนี้ คือ
+            อยากพัฒนาตนเองในสายงานที่ชอบ ซึ่งในตอนนี้อาจมีประสบการณ์ไม่มานักเกี่ยวกับการพัฒนาระบบหน้าบ้าน
+            แต่ดิฉันมีความมุ่งมั่น อดทนและพยายามศึกษาสิ่งใหม่ๆอยู่ตลอดเวลา
+            เพื่อที่จะนำมาใช้ให้ตัวเองสามารถพัฒนาขึ้นไปเรื่อยๆ แบบไม่มีที่สิ้นสุด งานอดิเรกของดิฉันในตอนนี้คือ เลี้ยงแมว
+            เล่นเกมและรับซ่อมอุปกรณ์อิเล็กทรอนิกส์ คติเตือนใจที่ฉันยึดอยู่เสมอ คือ ไม่ว่าเราจะพลาดกี่ครั้ง
+            ถ้าเราพยายามทำและแก้ไขในสิ่งที่พลาด วันที่ประสบความสำเร็จจะรอเราอยู่เสมอ</p>
+    </div>
+
+    <div id="Project" class="t-navbar">
+        <h1>Project</h1>
+        <p><a href="https://drive.google.com/drive/folders/1Lcjj-dFeiuH7JxBFDirOIMm-x5L0zOhw?usp=drive_link"
+                target="_self">Mosaic</a></p>
+        <p><a href="https://github.com/Tunwara01" target="_self">github</a></p>
+    </div>
+
+    <div id="Contact" class="t-navbar">
+        <h1>Contact</h1>
+        <p><img src="images\3.jpg" width="800" height="400"></p>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length };
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
